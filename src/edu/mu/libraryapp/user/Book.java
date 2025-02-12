@@ -1,5 +1,7 @@
 package edu.mu.libraryapp.user;
 
+import java.util.Objects;
+
 public class Book {
 	
 	private String title;
@@ -64,6 +66,15 @@ public class Book {
 	@Override
 	public String toString() {
 		return title + " by " + author + " (ISBN:" + isbn + ", $" + price + ")";
+	}
+
+	@Override
+	public boolean equals(Object other) {
+		Book book = (Book)other;
+		if (this.isbn.equals(book.getISBN())) { 
+			return true;
+		}
+		return false;
 	}
 	
 	
