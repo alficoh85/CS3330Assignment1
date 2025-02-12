@@ -21,6 +21,13 @@ public class Book {
 		this.isbn = isbn;
 		this.price = price;
 	}
+	
+	public Book(Book book) {
+		this.title = book.getTitle();
+		this.author = book.getAuthor();
+		this.isbn = book.getISBN();
+		this.price = book.getPrice();
+	}
 
 	public String getTitle() {
 		return title;
