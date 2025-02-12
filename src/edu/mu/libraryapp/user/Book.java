@@ -7,6 +7,13 @@ public class Book {
 	private String isbn;
 	private double price;
 	
+	public Book() {
+		title = "Unknown";
+		author = "Unknown";
+		isbn = "Unknown";
+		price = 0.0;
+	}
+
 	public String getTitle() {
 		return title;
 	}
