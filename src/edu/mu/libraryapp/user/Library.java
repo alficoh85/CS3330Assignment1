@@ -26,8 +26,10 @@ public class Library {
 	public boolean addBook(Book book) {
 		if(count < books.length) {
 			books[count++] = book;
+			System.out.println(book + " added successfully.");
 			return true;
 		}
+		System.out.println("Could not add " + book + ".");
 		return false;
 	}
 	
@@ -42,10 +44,11 @@ public class Library {
 				books[i] = books[count-1];
 				books[count-1] = null;
 				count--;
+				System.out.println("Removing book: " + book + "\n");
 				return true;
 			}
 		}
-		System.out.println("Cannot remove book \"" + book + "\", book could not be found in library.");
+		System.out.println("Cannot remove book \"" + book + "\", book could not be found in library.\n");
 		return false;
 	}
 	
@@ -71,9 +74,11 @@ public class Library {
 			System.out.println("No books in the library.");
 		}
 		else {
+			System.out.println("All books in the library: ");
 			for(int i=0;i<count;i++) {
 				System.out.println((i+1)+ ", "+books[i]);
 			}
+			System.out.println();
 		}
 	}
 }
