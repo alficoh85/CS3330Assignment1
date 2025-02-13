@@ -2,6 +2,7 @@ package edu.mu.libraryapp.user;
 
 public class Book {
 	
+	// Private attributes
 	private String title;
 	private String author;
 	private String isbn;

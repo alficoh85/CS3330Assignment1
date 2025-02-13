@@ -1,5 +1,4 @@
 package edu.mu.libraryapp.user;
-import java.util.Arrays;
 
 public class Library {
 	private Book[] books;
@@ -8,7 +7,7 @@ public class Library {
 	public Library() {
 		books = new Book[5];
 		count = 0;
-	} //it's not pushing properly?
+	}
 	
 	public boolean addBook(Book book) {
 		if(count < books.length) {
@@ -27,6 +26,7 @@ public class Library {
 				return true;
 			}
 		}
+		System.out.println("Cannot remove book \"" + book + "\", book could not be found in library.");
 		return false;
 	}
 	
