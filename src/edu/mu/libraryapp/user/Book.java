@@ -2,13 +2,17 @@ package edu.mu.libraryapp.user;
 
 public class Book {
 	
-	// Private attributes
+	/**
+	 * Private attributes
+	 */
 	private String title;
 	private String author;
 	private String isbn;
 	private double price;
 	
-	// Default Constructor
+	/**
+	 * Default Constructor
+	 */
 	public Book() {
 		title = "Unknown";
 		author = "Unknown";
@@ -41,22 +45,34 @@ public class Book {
 		this.price = book.getPrice();
 	}
 
-	// Accessor method for title
+	/**
+	 * Accessor method for title
+	 * @return
+	 */
 	public String getTitle() {
 		return title;
 	}
 	
-	// Accessor method for author
+	/**
+	 * Accessor method for author
+	 * @return
+	 */
 	public String getAuthor() {
 		return author;
 	}
 	
-	// Accessor method for ISBN
+	/**
+	 * Accessor method for ISBN
+	 * @return
+	 */
 	public String getISBN() {
 		return isbn;
 	}
 	
-	// Accessor method for price
+	/**
+	 * Accessor method for price
+	 * @return
+	 */
 	public double getPrice() {
 		return price;
 	}
@@ -93,7 +109,9 @@ public class Book {
 		this.price = price;
 	}
 
-	// toString method
+	/**
+	 * toString method
+	 */
 	@Override
 	public String toString() {
 		return title + " by " + author + " (ISBN:" + isbn + ", $" + price + ")";
